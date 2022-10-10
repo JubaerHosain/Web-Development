@@ -1,0 +1,2 @@
+asynchronous code runs after all the synchronous code in main stack is done executing.
+
