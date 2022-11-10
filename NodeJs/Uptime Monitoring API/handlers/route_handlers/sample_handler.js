@@ -11,10 +11,10 @@
 const sample_handler = {};
 
 // route object
-sample_handler.sampleHandler = (requestProperties, callback) => {
+sample_handler.sampleHandler = (requestProperties, callBack) => {
     console.log("Sample");
 
-    callback(200, {
+    callBack(200, {
         message: "This is a sample url",
     });
 };

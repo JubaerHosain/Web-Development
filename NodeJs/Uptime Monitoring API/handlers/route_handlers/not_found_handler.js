@@ -11,9 +11,9 @@
 const not_found_handler = {};
 
 // route object
-not_found_handler.notFoundHandler = (requestProperties, callback) => {
+not_found_handler.notFoundHandler = (requestProperties, callBack) => {
     console.log("Not Found");
-    callback(404, {
+    callBack(404, {
         message: "404 Not Found",
     });
 };
