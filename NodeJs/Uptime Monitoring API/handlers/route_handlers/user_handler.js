@@ -157,14 +157,14 @@ user_handler._methods.delete = (requestProperties, callBack) => {
                 requestProperties.headerObject.token,
                 (error) => {
                     if (!error) {
-                        database.delete("users", requestProperties.queryObject.phone, (error) => {
-                            if (!error) {
+                        database.delete("users", requestProperties.queryObject.phone, (error1) => {
+                            if (!error1) {
                                 callBack(200, {
                                     message: "Deleted successfully",
                                 });
                             } else {
                                 callBack(405, {
-                                    message: error,
+                                    message: error1,
                                 });
                             }
                         });

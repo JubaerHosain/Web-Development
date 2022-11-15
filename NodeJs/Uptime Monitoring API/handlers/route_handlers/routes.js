@@ -10,6 +10,7 @@ const { sampleHandler } = require("./sample_handler.js");
 const { userHandler } = require("./user_handler.js");
 const { notFoundHandler } = require("./not_found_handler.js");
 const { tokenHandler } = require("./token_handler.js");
+const { checkHandler } = require("./check_handler.js");
 
 // Object -> Module Scaffolding
 const routes = {};
@@ -19,6 +20,7 @@ routes.routes = {
     sample: sampleHandler,
     user: userHandler,
     token: tokenHandler,
+    check: checkHandler,
     not_found: notFoundHandler,
 };
 

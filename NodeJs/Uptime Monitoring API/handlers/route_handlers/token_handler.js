@@ -202,14 +202,14 @@ token_handler._methods.verify = (phone, tokenID, callBack) => {
                     // false means no error
                     callBack(false);
                 } else {
-                    callBack(true);
+                    callBack(error);
                 }
             } else {
-                callBack(true);
+                callBack(error);
             }
         });
     } else {
-        callBack(true);
+        callBack("Invlaid phone or query");
     }
 };
 

@@ -107,5 +107,28 @@ database.delete = (directory, fileName, callBack) => {
     });
 };
 
+
+/**
+ * @param {string} directory The directory name
+ * @param {fucntion} fucntion(Error, fileNames[] String)  The callback function
+ */
+database.getFileNames = (directory, callBack) => {
+    const filePath = path.join(database.base_dir, `${directory}/`);
+    console.log(filePath);
+
+    fs.readdir(filePath, (error, fileNames) => {
+        if(!error && fileNames && fileNames.length > 0) {
+            trimmedFileNames = [];
+            fileNames.forEach(fileName => {
+                trimmedFileNames.push(fileName.replace(".json", ""));
+            })
+
+            callBack(false, trimmedFileNames);
+        } else {
+            callBack("Error reading directory");
+        }
+    });
+}
+
 // export module
 module.exports = database;

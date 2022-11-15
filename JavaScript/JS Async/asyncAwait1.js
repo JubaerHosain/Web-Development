@@ -35,6 +35,7 @@ async function p3() {
 
 async function start() {
     try {
+        // data is parameter message given by resolve
         const data = await p1();
         await p2(data);
         const message = await p3();
@@ -47,7 +48,7 @@ async function start() {
 
 start();
 
-function test(){
+function test() {
     console.trace();
 }
 

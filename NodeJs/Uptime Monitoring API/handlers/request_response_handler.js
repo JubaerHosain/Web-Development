@@ -15,6 +15,8 @@ const server_handler = {};
 
 // Hanle Request Response
 server_handler.handleRequestResponse = (request, response) => {
+    console.log(request.path);
+
     // request handling
     const parsedURL = url.parse(request.url, true);
     const requestPath = parsedURL.pathname;

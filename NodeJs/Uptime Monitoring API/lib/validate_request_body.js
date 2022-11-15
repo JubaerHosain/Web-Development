@@ -22,12 +22,11 @@ const validate_request_body = {};
 
 validate_request_body.validate_tokenID = (tokenID) => {
     return typeof tokenID === "string" && tokenID.trim().length === current_env.tokenLength ? true : false;
-}
+};
 
 validate_request_body.validate_extend = (extend) => {
     return typeof extend === "string" && extend === "true" ? true : false;
-}
-
+};
 
 validate_request_body.validate_firstName = (firstName) => {
     return typeof firstName === "string" && firstName.trim().length > 0 ? true : false;
@@ -68,6 +67,25 @@ validate_request_body.validate_put_body = (post_body) => {
         validate_request_body.validate_phone(post_body.phone) ||
         validate_request_body.validate_password(post_body.password) ||
         validate_request_body.validate_tosAgreement(post_body.tosAgreement)
+    );
+};
+
+// all field should be valid
+validate_request_body.validate_check_body = (protocol, url, method, successCode, timeout) => {
+    console.log(protocol, url, method, successCode, timeout);
+    return (
+        typeof protocol === "string" &&
+        ["http", "https"].indexOf(protocol) > -1 &&
+        typeof url === "string" &&
+        url.length > 0 &&
+        typeof method === "string" &&
+        ["get", "post", "put", "delete"].indexOf(method) > -1 &&
+        typeof successCode === "object" &&
+        successCode instanceof Array &&
+        typeof timeout === "number" &&
+        timeout % 1 === 0 &&
+        timeout >= 1 &&
+        timeout <= 5
     );
 };
 
