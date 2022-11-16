@@ -7,8 +7,8 @@
 
 // Dependencies
 const https = require("https");
-process.env.TWILIO_ACCOUNT_SID = "ACeb1fc39fcba5419691b9f1a79e489b19";
-process.env.TWILIO_AUTH_TOKEN = "2e2f8fca891e86661e46651433164844";
+process.env.TWILIO_ACCOUNT_SID = "give";
+process.env.TWILIO_AUTH_TOKEN = "give";
 
 // Object -> Module Scaffolding
 const notification = {};
