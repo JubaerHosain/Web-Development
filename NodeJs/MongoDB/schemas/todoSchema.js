@@ -19,6 +19,9 @@ const todoSchema = mongoose.Schema({
 });
 
 // never use arrow function here
+const todos = "";
+
+console.log(todos);
 
 // instance methods 
 todoSchema.methods = {
@@ -32,7 +35,7 @@ todoSchema.methods = {
         mongoose.model("Todo").find({ status: "active" }, callback);
 
         // this not works here
-        //this.find({status: "active"}, callback);
+        // this.find({status: "active"}, callback);
     }
 }
 

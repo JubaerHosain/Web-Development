@@ -9,7 +9,7 @@ const todoRouter = require("./routers/todoRouter");
 // database connection with mongoose
 mongoose.connect("mongodb://localhost/todo")
     .then(() => {
-        console.log("Connection successfull");
+        console.log("Connection successful");
     })
     .catch((error) => {
         console.log(error);
