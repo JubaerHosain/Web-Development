@@ -11,16 +11,30 @@
 
         <script>
             const add = (function () {
-                let counter = 0;
-                return function () {
+                let counter = 0, tmp = 0;
+                const add1 = function () {
                     counter += 1;
+
+                    let a = 5;
+                    console.log(a);
+
                     return counter;
                 };
+
+                const add2 = function () {
+                    let a = 5;
+                    // console.log(tmp);
+                    console.log(a);
+                };
+
+                return add1;
             })();
 
             function myFunction() {
                 document.getElementById("demo").innerHTML = add();
             }
+
+            console.dir(add);
         </script>
     </body>
 </html>
