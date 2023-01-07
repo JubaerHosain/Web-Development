@@ -6,3 +6,10 @@
 
 Node.js is suitable for I/O intensive task.
 Node.js is not suitable for CPU intensive task.
+
+
+V8
+libuv
+llhttp
+c-ares
+OpenSSL
