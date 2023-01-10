@@ -1,0 +1,5 @@
+/user/
+/user/user_id 
+
+/user/user_id/items/
+/user/user_id/items/item_id
