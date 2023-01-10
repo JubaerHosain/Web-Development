@@ -3,7 +3,7 @@ body {
     background-color: linear-gradient(rgb(134, 199, 204), rgba(192, 11, 216, 0));
 }
 
-#container {
+#message-container {
     width: 60%;
     height: 60vh;
     border: 1px solid black;
