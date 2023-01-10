@@ -23,8 +23,8 @@ socket.on("receive", (data) => {
     append("left", `${data.name}: ${data.message}`);
 });
 
-socket.on("left-chat", (data) => {
-    append("left", `${data.name}: ${data.message}`);
+socket.on("left-chat", (name) => {
+    append("left", `${name} left the chat`);
 });
 
 sendForm.addEventListener("submit", (e) => {
